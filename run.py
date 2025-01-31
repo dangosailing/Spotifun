@@ -1,6 +1,6 @@
-from app import create_app
+from app import App
 
-spotifun = create_app()
+spotifun = App().create_app()
 
 if __name__ == "__main__":
     spotifun.run(debug=True)
