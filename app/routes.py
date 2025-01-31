@@ -2,26 +2,34 @@ from flask import Blueprint, render_template
 
 bp = Blueprint("main", __name__)
 
-#------------ HOME ------------"
+
+# ------------ HOME ------------"
 @bp.route("/", methods=["GET", "POST"])
 def home():
     return render_template("index.html")
-#------------ LOGIN ------------"
+
+
+# ------------ LOGIN ------------"
 @bp.route("/login")
 def login():
     return "Implement Login"
-#------------ REGISTER ------------"
+
+
+# ------------ REGISTER ------------"
 @bp.route("/register")
 def register():
     return "Implement Register"
-#------------ logout ------------"
+
+
+# ------------ logout ------------"
 @bp.route("/logout")
 def logout():
-    #TODO MAKE SURE TO CLEAR SESSION 
+    # TODO MAKE SURE TO CLEAR SESSION
     return "Implement Logout"
-#------------ SPOTIFY DATA ROUTES ------------
+
+
+# ------------ SPOTIFY DATA ROUTES ------------
 @bp.route("/callback")
 def callback():
     print("callback")
     return "Implement Callback"
-    
