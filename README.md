@@ -16,11 +16,11 @@ pandas, numpy - handle managing and visualizing data
 1. basic app functionality *make it run ✅
 2. basic routes ✅
 3. base templates ✅
-4. write simple tests for routes (status codes)
-5. database
-6. user model
+4. database ✅
+5. user model ✅
+6. write simple tests for routes (status codes)
 7. register user -> func 
-8. login user -> fun
+8. login user -> func
 
 # Test guidelines
 1. Arrange 
@@ -37,3 +37,13 @@ Routes
 
 #### Test scope
 Create user via register and login
+
+### FIXTURE
+Initialize test in a known state
+Defined as functions
+Fixtures defined in tests/conftest.py
+ Scope defines WHEN a fixture will be run
+    scope = function - run once per test func (default)
+    scope = class - run once per test class
+    scope = module - run once per module/test file
+    scope = function - run once per session (ie per call to pytest)
